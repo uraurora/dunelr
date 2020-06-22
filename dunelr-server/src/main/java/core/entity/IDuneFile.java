@@ -1,6 +1,6 @@
 package core.entity;
 
-import core.value.IDelataFile;
+import core.value.IDeltaFile;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -27,14 +27,14 @@ public interface IDuneFile {
      * @param duneFile 另一个duneFile
      * @return 抽象增量文件
      */
-    IDelataFile delta(IDuneFile duneFile);
+    IDeltaFile delta(IDuneFile duneFile);
 
     /**
      * 根据delta文件生成新的抽象文件，更新文件块
      * @param deltaFile delta文件
      * @return dune文件
      */
-    IDuneFile plus(IDelataFile deltaFile);
+    IDuneFile plus(IDeltaFile deltaFile);
 
     /**
      * 获取文件容量大小，单位为byte

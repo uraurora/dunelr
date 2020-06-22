@@ -1,6 +1,6 @@
 package core.entity;
 
-import core.value.IDelataFile;
+import core.value.IDeltaFile;
 
 import java.nio.file.Path;
 
@@ -22,7 +22,7 @@ public class DuneFile implements IDuneFile{
     }
 
     @Override
-    public IDelataFile delta(IDuneFile duneFile) {
+    public IDeltaFile delta(IDuneFile duneFile) {
         return null;
     }
 }

@@ -1,9 +1,8 @@
 package repository.entity;
 
 import com.google.common.collect.Lists;
-import core.value.IDelataFile;
+import core.value.IDeltaFile;
 
-import java.util.Iterator;
 import java.util.LinkedList;
 
 /**
@@ -33,7 +32,7 @@ public class DeltaFileRepository {
         return DeltaFileRepositoryHodler.INSTANCE;
     }
 
-    public IDelataFile get(long id){
+    public IDeltaFile get(long id){
         return versions.stream()
                 .filter(e->e.version == id)
                 .findFirst()
@@ -41,7 +40,7 @@ public class DeltaFileRepository {
                 .get();
     }
 
-    public boolean add(IDelataFile deltaFile){
+    public boolean add(IDeltaFile deltaFile){
         versions.addLast(new VersionNode(versionRepository.incrementAndGet(), deltaFile));
         return true;
     }
@@ -63,9 +62,9 @@ public class DeltaFileRepository {
     private static class VersionNode{
         private final long version;
 
-        private final IDelataFile delataFile;
+        private final IDeltaFile delataFile;
 
-        private VersionNode(long version, IDelataFile delataFile) {
+        private VersionNode(long version, IDeltaFile delataFile) {
             this.version = version;
             this.delataFile = delataFile;
         }
@@ -75,7 +74,7 @@ public class DeltaFileRepository {
             return version;
         }
 
-        public IDelataFile getDelataFile() {
+        public IDeltaFile getDelataFile() {
             return delataFile;
         }
     }

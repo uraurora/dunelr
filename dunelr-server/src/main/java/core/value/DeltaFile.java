@@ -6,18 +6,18 @@ package core.value;
  * @date : 2020-06-22 11:03
  * @description : 增量文件
  */
-public class DeltaFile implements IDelataFile{
+public class DeltaFile implements IDeltaFile {
 
     private long versionId;
 
 
     @Override
-    public IDelataFile plus(IDelataFile other) {
+    public IDeltaFile plus(IDeltaFile other) {
         return null;
     }
 
     @Override
-    public IDelataFile subtract(IDelataFile other) {
+    public IDeltaFile subtract(IDeltaFile other) {
         return null;
     }
 }
