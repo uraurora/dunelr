@@ -4,6 +4,7 @@ import com.google.common.collect.Lists;
 import core.value.IDeltaFile;
 
 import java.util.LinkedList;
+import java.util.List;
 
 /**
  * @author : gaoxiaodong04
@@ -24,23 +25,23 @@ public class DeltaFileRepository {
          versionRepository = VersionRepository.getInstance();
     }
 
-    private static class DeltaFileRepositoryHodler{
+    private static class DeltaFileRepositoryHolder {
         private static final DeltaFileRepository INSTANCE = new DeltaFileRepository();
     }
 
     public static DeltaFileRepository getInstance(){
-        return DeltaFileRepositoryHodler.INSTANCE;
+        return DeltaFileRepositoryHolder.INSTANCE;
     }
 
-    public IDeltaFile get(long id){
+    public List<IDeltaFile> get(long id){
         return versions.stream()
                 .filter(e->e.version == id)
                 .findFirst()
-                .map(VersionNode::getDelataFile)
+                .map(VersionNode::getDeltaFiles)
                 .get();
     }
 
-    public boolean add(IDeltaFile deltaFile){
+    public boolean add(List<IDeltaFile> deltaFile){
         versions.addLast(new VersionNode(versionRepository.incrementAndGet(), deltaFile));
         return true;
     }
@@ -51,8 +52,8 @@ public class DeltaFileRepository {
 
     /**
      * 删除指定版本的增量文件
-     * @param id
-     * @return
+     * @param id 提交版本
+     * @return 对应版本的提交文件
      */
     public boolean remove(long id){
         versions.removeIf(versionNode -> versionNode.version == id);
@@ -61,12 +62,12 @@ public class DeltaFileRepository {
 
     private static class VersionNode{
         private final long version;
+        // FIXME: 一个版本应该对应一系列的增量文件才对
+        private final List<IDeltaFile> deltaFiles;
 
-        private final IDeltaFile delataFile;
-
-        private VersionNode(long version, IDeltaFile delataFile) {
+        private VersionNode(long version, List<IDeltaFile> deltaFiles) {
             this.version = version;
-            this.delataFile = delataFile;
+            this.deltaFiles = deltaFiles;
         }
 
 
@@ -74,8 +75,8 @@ public class DeltaFileRepository {
             return version;
         }
 
-        public IDeltaFile getDelataFile() {
-            return delataFile;
+        public List<IDeltaFile> getDeltaFiles() {
+            return deltaFiles;
         }
     }
 }

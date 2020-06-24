@@ -1,10 +1,13 @@
 package core.entity;
 
+import core.value.DuneBlock;
+import core.value.DuneFileSummary;
 import core.value.IDeltaFile;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.List;
 
 /**
  * @author gaoxiaodong
@@ -12,7 +15,7 @@ import java.nio.file.Path;
 public interface IDuneFile {
     /**
      * 获取该文档的路径Path
-     * @return
+     * @return 文档路径
      */
     Path getPath();
 
@@ -20,14 +23,21 @@ public interface IDuneFile {
      * 获取文件块的数量
      * @return 块的个数
      */
-    long getBlockNum();
+    int getBlockNum();
+
 
     /**
-     * 生成deltaFile，比对另一个duneFile生成增量文件，约定本身为版本较新的版本文件
-     * @param duneFile 另一个duneFile
+     * 获取文件的块集合
+     * @return 文件块列表
+     */
+    DuneFileSummary toSummary() throws IOException;
+
+    /**
+     * 生成deltaFile，比对另一个duneFile摘要生成增量文件，约定本身source文件
+     * @param other 另一个duneFile摘要
      * @return 抽象增量文件
      */
-    IDeltaFile delta(IDuneFile duneFile);
+    IDeltaFile delta(DuneFileSummary other) throws IOException;
 
     /**
      * 根据delta文件生成新的抽象文件，更新文件块

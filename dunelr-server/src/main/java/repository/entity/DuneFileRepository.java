@@ -7,4 +7,5 @@ package repository.entity;
  * @description : 当前版本的文档仓库
  */
 public class DuneFileRepository {
+
 }
