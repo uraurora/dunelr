@@ -4,7 +4,9 @@ package core.value;
  * delta文件抽象，主要记录dune文件间的文件块差异
  * @author gaoxiaodong
  */
-public interface IDeltaFile {
+public interface IDeltaFile extends Iterable<DeltaFileEntry> {
+
+
 
 
     /**

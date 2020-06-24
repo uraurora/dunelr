@@ -1,5 +1,11 @@
 package core.value;
 
+import io.netty.buffer.ByteBuf;
+import io.netty.buffer.CompositeByteBuf;
+import io.netty.buffer.Unpooled;
+
+import java.util.List;
+
 /**
  * @author : gaoxiaodong04
  * @program : dunelr
@@ -8,6 +14,31 @@ package core.value;
  */
 public class DuneFileSummary {
 
+    private final List<DuneBlock> blocks;
+
+    private DuneFileSummary(List<DuneBlock> blocks){
+        this.blocks = blocks;
+    }
+
+    public static DuneFileSummary newInstance(List<DuneBlock> blocks){
+        return new DuneFileSummary(blocks);
+    }
+
+    public List<DuneBlock> toBlocks(){
+        return blocks;
+    }
+
+    public CompositeByteBuf toCompositeByteBuf(){
+        CompositeByteBuf bufs = Unpooled.compositeBuffer();
+        for (DuneBlock block : blocks){
+            ByteBuf buf = Unpooled.buffer()
+                    .writeInt(block.getIndex())
+                    .writeLong(block.getWeakCheckSum())
+                    .writeBytes(block.getStrongCheckSum());
+            bufs.addComponent(buf);
+        }
+        return bufs;
+    }
 
 
 }

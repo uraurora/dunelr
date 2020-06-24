@@ -1,7 +1,22 @@
 package core.value;
 
+import com.google.common.collect.Iterables;
+import com.google.common.collect.Iterators;
+import core.entity.DuneFile;
+import core.entity.IDuneFile;
+import io.netty.buffer.ByteBuf;
 import io.netty.buffer.ByteBufHolder;
 import io.netty.buffer.CompositeByteBuf;
+import io.netty.buffer.Unpooled;
+
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
+import java.util.Iterator;
+import java.util.List;
 
 /**
  * @author : gaoxiaodong04
@@ -11,31 +26,25 @@ import io.netty.buffer.CompositeByteBuf;
  */
 public class DeltaFile implements IDeltaFile {
 
+    // private final int Id;
+
     /**
      * 增量文件的ByteBuf组合试图，因为某些重复部分不会以byte[]形式出现
      */
-    private final CompositeByteBuf buf;
 
-    private final boolean[] isMatch;
+    private final List<DeltaFileEntry> entries;
 
     private DeltaFile (DeltaFileBuilder builder){
-        buf = builder.buf;
-        isMatch = builder.isMatch;
+        entries = builder.entries;
+
     }
 
     public static class DeltaFileBuilder {
-        private CompositeByteBuf buf;
-
-        private boolean[] isMatch;
+        private List<DeltaFileEntry> entries;
 
 
-        public DeltaFileBuilder setIndex(CompositeByteBuf buf) {
-            this.buf = buf;
-            return this;
-        }
-
-        public DeltaFileBuilder setIsMatch(boolean[] isMatch) {
-            this.isMatch = isMatch;
+        public DeltaFileBuilder setIsMatch(List<DeltaFileEntry> entries) {
+            this.entries = entries;
             return this;
         }
 
@@ -48,6 +57,16 @@ public class DeltaFile implements IDeltaFile {
         return new DeltaFileBuilder();
     }
 
+    public List<DeltaFileEntry> getEntries() {
+        return entries;
+    }
+
+    @Override
+    public Iterator<DeltaFileEntry> iterator() {
+        return entries.iterator();
+    }
+
+
 
     @Override
     public IDeltaFile plus(IDeltaFile other) {
@@ -58,4 +77,5 @@ public class DeltaFile implements IDeltaFile {
     public IDeltaFile subtract(IDeltaFile other) {
         return null;
     }
+
 }
