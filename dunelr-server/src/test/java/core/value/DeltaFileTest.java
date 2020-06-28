@@ -38,11 +38,12 @@ public class DeltaFileTest {
 
     @Test
     public void getIsMatch() throws IOException {
-        BufferedWriter writer = Files.newBufferedWriter(target, StandardOpenOption.CREATE);
         Random random = new Random();
-        for (int i = 0; i <  512 * 1024; i++) {
-            writer.write(String.valueOf(random.nextInt()));
+        try (BufferedWriter writer = Files.newBufferedWriter(target, StandardOpenOption.CREATE)) {
+            for (int i = 0; i < 512 * 1024; i++) {
+                writer.write(String.valueOf(random.nextInt()));
+            }
+            writer.flush();
         }
-        writer.flush();
     }
 }

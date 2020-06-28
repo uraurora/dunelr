@@ -3,6 +3,7 @@ package core.service;
 import core.entity.IDuneFile;
 import core.value.IDeltaFile;
 
+import java.io.IOException;
 import java.nio.file.Path;
 
 /**
@@ -16,7 +17,7 @@ public interface IDuneFileService {
      * @param path
      * @return
      */
-    IDuneFile getIfPresent(Path path);
+    IDuneFile getIfPresent(Path path) throws IOException;
 
     /**
      * 获取duneFile，如果不存在则新建，返回新建的版本

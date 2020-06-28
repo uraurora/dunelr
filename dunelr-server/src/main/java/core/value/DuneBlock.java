@@ -15,7 +15,7 @@ public class DuneBlock {
     /**
      * 文件块的大小，一般默认为2KB
      */
-    public static final int SIZE =  1024;
+    public static final int SIZE =  2 * 1024;
     /**
      * 文件块的索引，在文件中的内部索引
      */
