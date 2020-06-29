@@ -38,7 +38,7 @@ public class DeltaFileRepository {
                 .filter(e->e.version == id)
                 .findFirst()
                 .map(VersionNode::getDeltaFiles)
-                .get();
+                .orElse(Lists.newArrayList());
     }
 
     public boolean add(List<IDeltaFile> deltaFile){

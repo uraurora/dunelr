@@ -1,17 +1,17 @@
 package core.entity;
 
+import core.listener.DuneDirectoryListener;
 import org.junit.Test;
 
 import java.io.IOException;
 import java.nio.file.Paths;
 
-import static org.junit.Assert.*;
-
 public class DuneDirectoryTest {
 
     @Test
-    public void start() throws IOException {
-        DuneDirectory directory = DuneDirectory.newInstance(Paths.get("/Users/gaoxiaodong/Desktop/"));
+    public void start() throws IOException, InterruptedException {
+        DuneDirectoryListener directory = DuneDirectoryListener.newInstance(Paths.get("/Users/gaoxiaodong/Desktop/test"));
         directory.start();
+        Thread.sleep(500000);
     }
 }

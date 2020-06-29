@@ -1,96 +1,61 @@
 package core.entity;
 
-import com.github.fracpete.processoutput4j.output.CollectingProcessOutput;
-import com.github.fracpete.rsync4j.RSync;
-import com.google.common.util.concurrent.ThreadFactoryBuilder;
-import io.netty.channel.EventLoop;
-import io.netty.util.concurrent.DefaultThreadFactory;
-
 import java.io.IOException;
 import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
-import java.util.concurrent.ThreadFactory;
+import java.util.Iterator;
+import java.util.Objects;
+import java.util.function.Consumer;
 
 /**
  * @author : gaoxiaodong04
  * @program : dunelr
- * @date : 2020-06-28 17:05
- * @description : 需要同步文件的文件系统根目录，监听该目录
+ * @date : 2020-06-29 14:40
+ * @description :
  */
 public class DuneDirectory {
 
     private final Path path;
 
-    private final WatchService watchService;
-
-    private final ThreadFactory factory;
-
-    private DuneDirectory(Path path, ThreadFactory factory) throws IOException {
+    private DuneDirectory(Path path) throws NoSuchFileException {
+        if (!Files.exists(path) || !Files.isDirectory(path)) {
+            throw new NoSuchFileException(path.toString());
+        }
         this.path = path;
-        this.watchService = this.path.getFileSystem().newWatchService();
-        this.factory = factory;
-        registerDirectories(this.path, this.watchService);
     }
 
-    public static DuneDirectory newInstance(Path path) throws IOException {
-        ThreadFactory factory = new ThreadFactoryBuilder()
-                .setDaemon(true)
-                .setNameFormat("Dunelr-Sync-Daemon-")
-                .build();
-        return new DuneDirectory(path, factory);
+    public static DuneDirectory newInstance(Path path) throws NoSuchFileException {
+        return new DuneDirectory(path);
     }
 
-    public static DuneDirectory newInstance(Path path, ThreadFactory factory) throws IOException {
-        return new DuneDirectory(path, factory);
+    public Path getPath() {
+        return path;
     }
 
-    private static void registerDirectories(Path path, WatchService watchService) throws IOException {
-        Files.walkFileTree(path, new SimpleFileVisitor<Path>() {
+    public void traversal(Consumer<? super Path> consumer) throws IOException {
+        Files.walkFileTree(path, new SimpleFileVisitor<Path>(){
             @Override
-            public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs) throws IOException {
-                dir.register(
-                        watchService,
-                        StandardWatchEventKinds.ENTRY_CREATE,
-                        StandardWatchEventKinds.ENTRY_DELETE,
-                        StandardWatchEventKinds.ENTRY_MODIFY
-                );
+            public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
+                consumer.accept(file);
                 return FileVisitResult.CONTINUE;
             }
         });
     }
 
-    private void keepWatching() {
-        try {
-            for(; ;) {
-                WatchKey watchKey = watchService.take();
-                for (WatchEvent<?> event : watchKey.pollEvents()) {
-                    if (event.kind() == StandardWatchEventKinds.OVERFLOW) {
-                        //事件可能lost or discarded
-                        continue;
-                    }
-                    // TODO:事件处理，目前规划是将事件提交到环形队列中，待定，需要确定一次版本的边界在哪
-                    Path file = (Path) event.context();
-                    System.out.println("事件类型：" + event.kind());
-                    System.out.println("文件：" + file);
-                }
-                // 重设WatchKey
-                if (!watchKey.reset()) {
-                    break;
-                }
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
         }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        DuneDirectory directory = (DuneDirectory) o;
+        return Objects.equals(path, directory.path);
     }
 
-    public void start(){
-        factory.newThread(this::keepWatching).start();
-        System.out.println("线程启动");
-    }
-
-    public static void main(String[] args) throws IOException {
-        DuneDirectory directory = DuneDirectory.newInstance(Paths.get("/Users/gaoxiaodong/Desktop/test"));
-        //directory.start();
-        new Thread(directory::keepWatching).start();
+    @Override
+    public int hashCode() {
+        return Objects.hash(path);
     }
 }
