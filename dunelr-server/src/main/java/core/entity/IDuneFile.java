@@ -1,13 +1,11 @@
 package core.entity;
 
-import core.value.DuneBlock;
 import core.value.DuneFileSummary;
-import core.value.IDeltaFile;
+import core.value.IDelta;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.List;
 
 /**
  * @author gaoxiaodong
@@ -37,14 +35,14 @@ public interface IDuneFile {
      * @param other 另一个duneFile摘要
      * @return 抽象增量文件
      */
-    IDeltaFile delta(DuneFileSummary other) throws IOException;
+    IDelta delta(DuneFileSummary other) throws IOException;
 
     /**
      * 根据delta文件生成新的抽象文件，更新文件块
      * @param deltaFile delta文件
      * @return dune文件
      */
-    IDuneFile plus(IDeltaFile deltaFile);
+    IDuneFile plus(IDelta deltaFile) throws IOException;
 
     /**
      * 获取文件容量大小，单位为byte

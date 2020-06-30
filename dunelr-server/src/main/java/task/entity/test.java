@@ -2,7 +2,6 @@ package task.entity;
 
 import com.github.fracpete.processoutput4j.output.CollectingProcessOutput;
 import com.github.fracpete.rsync4j.RSync;
-import core.value.IDeltaFile;
 
 /**
  * @author : gaoxiaodong04

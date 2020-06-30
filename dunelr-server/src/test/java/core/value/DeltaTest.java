@@ -2,7 +2,6 @@ package core.value;
 
 import core.entity.DuneFile;
 import core.entity.IDuneFile;
-import io.netty.util.CharsetUtil;
 import org.junit.Test;
 
 import java.io.BufferedWriter;
@@ -13,13 +12,11 @@ import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.util.Random;
 
-import static org.junit.Assert.*;
-
-public class DeltaFileTest {
+public class DeltaTest {
 
     String str1 = "/Users/gaoxiaodong/Desktop/test.txt";
-    String str2 = "/Users/gaoxiaodong/Desktop/test2.txt";
-    Path target = Paths.get(str1), source = Paths.get(str2);
+    String str2 = "/Users/gaoxiaodong/Desktop/test的副本.txt";
+    Path source = Paths.get(str1), target = Paths.get(str2);
 
     @Test
     public void testPlus() throws IOException {
@@ -29,8 +26,8 @@ public class DeltaFileTest {
         IDuneFile file = DuneFile.newInstance(target);
         DuneFileSummary summary = file.toSummary();
         System.out.println("block size : " + summary.toBlocks().size());
-        IDeltaFile deltaFile = DuneFile.newInstance(source).delta(summary);
-        for (DeltaFileEntry buf : deltaFile){
+        IDelta deltaFile = DuneFile.newInstance(source).delta(summary);
+        for (DeltaEntry buf : deltaFile){
             System.out.println(buf);
         }
     }

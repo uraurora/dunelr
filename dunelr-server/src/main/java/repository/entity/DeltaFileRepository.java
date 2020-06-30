@@ -1,7 +1,7 @@
 package repository.entity;
 
 import com.google.common.collect.Lists;
-import core.value.IDeltaFile;
+import core.value.IDelta;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -33,7 +33,7 @@ public class DeltaFileRepository {
         return DeltaFileRepositoryHolder.INSTANCE;
     }
 
-    public List<IDeltaFile> get(long id){
+    public List<IDelta> get(long id){
         return versions.stream()
                 .filter(e->e.version == id)
                 .findFirst()
@@ -41,7 +41,7 @@ public class DeltaFileRepository {
                 .orElse(Lists.newArrayList());
     }
 
-    public boolean add(List<IDeltaFile> deltaFile){
+    public boolean add(List<IDelta> deltaFile){
         versions.addLast(new VersionNode(versionRepository.incrementAndGet(), deltaFile));
         return true;
     }
@@ -63,9 +63,9 @@ public class DeltaFileRepository {
     private static class VersionNode{
         private final long version;
         // FIXME: 一个版本应该对应一系列的增量文件才对
-        private final List<IDeltaFile> deltaFiles;
+        private final List<IDelta> deltaFiles;
 
-        private VersionNode(long version, List<IDeltaFile> deltaFiles) {
+        private VersionNode(long version, List<IDelta> deltaFiles) {
             this.version = version;
             this.deltaFiles = deltaFiles;
         }
@@ -75,7 +75,7 @@ public class DeltaFileRepository {
             return version;
         }
 
-        public List<IDeltaFile> getDeltaFiles() {
+        public List<IDelta> getDeltaFiles() {
             return deltaFiles;
         }
     }

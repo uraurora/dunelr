@@ -10,12 +10,17 @@ import java.util.Arrays;
  * @date : 2020-06-24 15:17
  * @description :
  */
-public class DeltaFileEntry {
+public class DeltaEntry {
+    /**
+     * 不同的文件块或者是相同文件块在target中的index
+     */
     private final ByteBuf buf;
-
+    /**
+     * 文件块是否匹配
+     */
     private final boolean bool;
 
-    public DeltaFileEntry(ByteBuf buf, boolean bool) {
+    public DeltaEntry(ByteBuf buf, boolean bool) {
         this.buf = buf;
         this.bool = bool;
     }

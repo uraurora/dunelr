@@ -1,14 +1,7 @@
 package core.entity;
 
-import core.value.DuneBlock;
-import core.value.IDeltaFile;
 import util.encoder.Adler32Util;
 import util.encoder.Md5Util;
-
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.RandomAccessFile;
-import java.util.List;
 
 public enum SyncCategory {
     /**

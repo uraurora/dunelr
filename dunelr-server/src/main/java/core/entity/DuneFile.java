@@ -1,16 +1,15 @@
 package core.entity;
 
-import com.google.common.cache.LoadingCache;
 import com.google.common.collect.Lists;
 import core.value.*;
-import io.netty.buffer.ByteBuf;
-import io.netty.buffer.CompositeByteBuf;
+import io.netty.buffer.ByteBufUtil;
 import io.netty.buffer.Unpooled;
 import util.encoder.ConvertUtil;
 
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.StandardOpenOption;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
@@ -23,6 +22,8 @@ import java.util.stream.Collectors;
  * @description : dunelr的文件抽象
  */
 public class DuneFile implements IDuneFile{
+
+    private final static String DUNE_FILE_TEMP_PRE = "~dune-temp";
 
     private Path path;
 
@@ -72,11 +73,11 @@ public class DuneFile implements IDuneFile{
      * @throws IOException
      */
     @Override
-    public IDeltaFile delta(DuneFileSummary other) throws IOException {
+    public IDelta delta(DuneFileSummary other) throws IOException {
         int left = 0, start = 0;
         byte[] bytes = new byte[DuneBlock.SIZE];
-        List<DeltaFileEntry> entries = Lists.newArrayList();
-        Map<Long, DuneBlock> map = weakCheckSumMap(other);
+        List<DeltaEntry> entries = Lists.newArrayList();
+        Map<Long, DuneBlock> map = weakCheckSumMap(other.toBlocks());
 
         try (RandomAccessFile raf = new RandomAccessFile(path.toFile(), "r")){
             while(left < size()){
@@ -93,10 +94,10 @@ public class DuneFile implements IDuneFile{
                         if(start < left){
                             byte[] temp = new byte[left - start];
                             raf.seek(start); raf.read(temp);
-                            entries.add(new DeltaFileEntry(Unpooled.wrappedBuffer(temp), false));
+                            entries.add(new DeltaEntry(Unpooled.wrappedBuffer(temp), false));
                         }
                         // deltaFile记录匹配和index
-                        entries.add(new DeltaFileEntry(Unpooled.copiedBuffer(ConvertUtil.int2Bytes(block.getIndex())), true));
+                        entries.add(new DeltaEntry(Unpooled.wrappedBuffer(ConvertUtil.int2Bytes(block.getIndex())), true));
                         left += DuneBlock.SIZE;
                         start = left;
                     } else{
@@ -111,22 +112,54 @@ public class DuneFile implements IDuneFile{
             if (start < left){
                 byte[] temp = new byte[left - start];
                 raf.seek(start); raf.read(temp);
-                entries.add(new DeltaFileEntry(Unpooled.wrappedBuffer(temp), false));
+                entries.add(new DeltaEntry(Unpooled.wrappedBuffer(temp), false));
             }
         }
-        return DeltaFile.builder()
+        return Delta.builder()
                 .setIsMatch(entries)
                 .build();
     }
 
     /**
-     * 会改变自身的方法，会重新生成文件，之后修改
+     * 增量更新文件的方法，会重新生成文件
      * @param deltaFile delta文件
-     * @return
+     * @return 新的文件对象
      */
     @Override
-    public IDuneFile plus(IDeltaFile deltaFile) {
-        return null;
+    public IDuneFile plus(IDelta deltaFile) throws IOException {
+        // FIXME:完成文件整合，首先应当根据delta中的匹配个数来判断是是否文件整合，文件整合是否必须是新建方式
+        if (deltaFile.getEntries().stream().allMatch(DeltaEntry::isBool)) {
+            return this;
+        } else {
+            Path tempPath =path.getParent().resolve(DUNE_FILE_TEMP_PRE + path.getFileName());
+            try(final OutputStream outputStream = Files.newOutputStream(
+                    tempPath,
+                    StandardOpenOption.CREATE)
+            ) {
+                try (RandomAccessFile raf = new RandomAccessFile(path.toFile(), "r")) {
+
+                    for (DeltaEntry e : deltaFile) {
+                        // 文件块匹配，写入本地文件块
+                        if (e.isBool()) {
+                            int index = ConvertUtil.bytes2Int(ByteBufUtil.getBytes(e.getBuf()));
+                            raf.seek(DuneBlock.SIZE * index);
+                            byte[] bytes = new byte[DuneBlock.SIZE]; raf.read(bytes);
+                            outputStream.write(bytes);
+                        } else {
+                            // 不匹配则直接写入
+                            outputStream.write(ByteBufUtil.getBytes(e.getBuf()));
+                        }
+                    }
+                }
+            }
+            finally {
+                Files.deleteIfExists(path);
+                if (Files.exists(tempPath)) {
+                    Files.move(tempPath, path);
+                }
+            }
+            return DuneFile.newInstance(path);
+        }
     }
 
     private List<DuneBlock> blocks() throws IOException {
@@ -152,8 +185,8 @@ public class DuneFile implements IDuneFile{
         return res;
     }
 
-    private static Map<Long, DuneBlock> weakCheckSumMap(DuneFileSummary summary){
-        return summary.toBlocks().stream().collect(Collectors.toMap(
+    private static Map<Long, DuneBlock> weakCheckSumMap(List<DuneBlock> summary){
+        return summary.stream().collect(Collectors.toMap(
                 DuneBlock::getWeakCheckSum,
                 e->e,
                 (v1, v2) -> v2

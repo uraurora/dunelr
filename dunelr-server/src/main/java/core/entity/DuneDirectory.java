@@ -1,5 +1,7 @@
 package core.entity;
 
+import core.listener.DuneDirectoryListener;
+
 import java.io.IOException;
 import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
@@ -40,6 +42,14 @@ public class DuneDirectory {
                 return FileVisitResult.CONTINUE;
             }
         });
+    }
+
+    public DuneDirectoryListener toListener(){
+        try {
+            return DuneDirectoryListener.newInstance(this);
+        } catch (IOException e) {
+            return null;
+        }
     }
 
     @Override
