@@ -6,7 +6,12 @@
 
     <groupId>groupId</groupId>
     <artifactId>dunelr</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>Dunelr-core</module>
+        <module>dunelr-core</module>
+    </modules>
 
     <properties>
         <guava.version>28.2-jre</guava.version>

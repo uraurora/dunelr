@@ -2,16 +2,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>groupId</groupId>
         <artifactId>dunelr</artifactId>
+        <groupId>groupId</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
+    <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.sei</groupId>
-    <artifactId>dunelr-server</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>dunelr-core</artifactId>
     <build>
         <plugins>
             <plugin>
@@ -26,15 +25,18 @@
     </build>
 
     <dependencies>
-
+        <!-- https://mvnrepository.com/artifact/com.github.fracpete/rsync4j-core -->
         <dependency>
-            <groupId>com.sei</groupId>
-            <artifactId>dunelr-core</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
+            <groupId>com.github.fracpete</groupId>
+            <artifactId>rsync4j-core</artifactId>
+            <version>3.1.3-1</version>
         </dependency>
-
-
+        <!-- https://mvnrepository.com/artifact/com.github.fracpete/processoutput4j -->
+        <dependency>
+            <groupId>com.github.fracpete</groupId>
+            <artifactId>processoutput4j</artifactId>
+            <version>0.0.11</version>
+        </dependency>
     </dependencies>
 
 
