@@ -40,14 +40,16 @@ public class DunelrTest {
 
     @Test
     public void test(){
+
         System.out.println(testPath("/users/test", "/test/myself"));
     }
 
-    private List<Path> testPath(String... o){
-        final ArrayList<Path> res = Lists.newArrayList();
+    private List<Path> testPath(String one, String... o){
+        final ArrayList<Path> res = Lists.newArrayList(Paths.get(one));
         for (String t : o){
             res.add(Paths.get(t));
         }
         return res;
     }
+
 }

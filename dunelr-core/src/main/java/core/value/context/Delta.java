@@ -30,7 +30,7 @@ public class Delta implements IDelta {
         private List<DeltaEntry> entries;
 
 
-        public DeltaFileBuilder setIsMatch(List<DeltaEntry> entries) {
+        public DeltaFileBuilder setEntries(List<DeltaEntry> entries) {
             this.entries = entries;
             return this;
         }

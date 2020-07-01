@@ -117,7 +117,7 @@ public class DuneFile implements IDuneFile{
                         left += DuneBlock.SIZE;
                         start = left;
                     } else{
-                        // 弱检验发生碰撞，仍旧未通过
+                        // 弱检验发生碰撞，仍旧未通过，左指针++
                         left ++;
                     }
                 } else{
@@ -132,7 +132,7 @@ public class DuneFile implements IDuneFile{
             }
         }
         return Delta.builder()
-                .setIsMatch(entries)
+                .setEntries(entries)
                 .build();
     }
 
@@ -160,7 +160,8 @@ public class DuneFile implements IDuneFile{
                         if (e.isBool()) {
                             int index = ConvertUtil.bytes2Int(e.getBuf());
                             raf.seek(DuneBlock.SIZE * index);
-                            byte[] bytes = new byte[DuneBlock.SIZE]; raf.read(bytes);
+                            byte[] bytes = new byte[DuneBlock.SIZE];
+                            raf.read(bytes);
                             outputStream.write(bytes);
                         } else {
                             // 不匹配则直接写入

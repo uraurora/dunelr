@@ -20,16 +20,24 @@ public class Dunelr {
 
     private final List<IDuneFile> destination;
 
+    private final boolean isAsync;
 
+    //<editor-fold desc="builder pattern">
     private Dunelr (DunelrBuilder builder){
         source = builder.source;
+        if (builder.destination.isEmpty()) {
+            throw new IllegalArgumentException("至少加入一个同步目标文件地址");
+        }
         destination = builder.destination;
+        this.isAsync = builder.isAsync;
     }
 
     public static class DunelrBuilder {
         private IDuneFile source;
 
         private List<IDuneFile> destination;
+
+        private boolean isAsync = false;
 
         public DunelrBuilder setSource(Path source) {
             try {
@@ -42,6 +50,11 @@ public class Dunelr {
 
         public DunelrBuilder setDestination(List<IDuneFile> destination) {
             this.destination = destination;
+            return this;
+        }
+
+        public DunelrBuilder async() {
+            isAsync = true;
             return this;
         }
 
@@ -62,17 +75,24 @@ public class Dunelr {
     public static DunelrBuilder builder(){
         return new DunelrBuilder();
     }
+    //</editor-fold>
 
     public List<IDuneFile> execute(){
         List<IDuneFile> res = Lists.newArrayList();
-        for (IDuneFile tar : destination){
-            final IDelta delta = DuneFiles.delta(source, tar);
+        if (isAsync){
 
-            final int sum = delta.getEntries().stream().filter(e -> !e.isBool()).mapToInt(e -> e.getBuf().length).sum();
-            System.out.println("byte length : " + sum);
-
-            res.add(DuneFiles.plus(tar, delta));
         }
+        else{
+            for (IDuneFile tar : destination){
+                final IDelta delta = DuneFiles.delta(source, tar);
+
+                final int sum = delta.getEntries().stream().filter(e -> !e.isBool()).mapToInt(e -> e.getBuf().length).sum();
+                System.out.println("byte length : " + sum);
+
+                res.add(DuneFiles.plus(tar, delta));
+            }
+        }
+
         return res;
     }
 

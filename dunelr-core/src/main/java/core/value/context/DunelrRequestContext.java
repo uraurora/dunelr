@@ -21,4 +21,48 @@ public class DunelrRequestContext {
      */
     private DunelrSyncEnum syncEnum;
 
+    //<editor-fold desc="builder pattern">
+
+    public DunelrRequestContext(DunelrRequestContextBuilder builder) {
+        this.requestEnum = builder.requestEnum;
+        this.syncEnum = builder.syncEnum;
+    }
+
+    public static DunelrRequestContextBuilder builder() {
+        return new DunelrRequestContextBuilder();
+    }
+
+    /**
+     * builder模式
+     */
+    public static final class DunelrRequestContextBuilder {
+        private DunelrRequestEnum requestEnum;
+        private DunelrSyncEnum syncEnum;
+
+        private DunelrRequestContextBuilder() {
+        }
+
+        public DunelrRequestContextBuilder setRequestEnum(DunelrRequestEnum requestEnum) {
+            this.requestEnum = requestEnum;
+            return this;
+        }
+
+        public DunelrRequestContextBuilder setSyncEnum(DunelrSyncEnum syncEnum) {
+            this.syncEnum = syncEnum;
+            return this;
+        }
+
+        public DunelrRequestContext build() {
+            return new DunelrRequestContext(this);
+        }
+    }
+    //</editor-fold>
+
+    public DunelrRequestEnum getRequestEnum() {
+        return requestEnum;
+    }
+
+    public DunelrSyncEnum getSyncEnum() {
+        return syncEnum;
+    }
 }
