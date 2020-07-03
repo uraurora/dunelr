@@ -1,9 +1,8 @@
 package connect.api;
 
 
-import core.value.context.DunelrContext;
-import core.value.context.DunelrRequestContext;
-import core.value.context.IDelta;
+import value.context.DunelrContext;
+import value.context.DunelrRequestContext;
 
 import java.nio.file.Path;
 
@@ -16,14 +15,14 @@ import java.nio.file.Path;
 public interface IDunelrChannel {
 
     /**
-     * 上传文件和文件信息，是全量还是增量，还包含文件的位置，文件名等信息
+     * 上传文件和文件信息，是全量还是增量，还包含文件的位置，文件名等信息，还包含同步方向
      * @param context 文件上下文信息
      * @return 是否成功
      */
     boolean upload(DunelrContext context);
 
     /**
-     * 发送请求，申请同步到，还是同步，是否成功
+     * 发送请求，是否成功
      * @param requestContext 请求上下文
      */
     void sendContext(DunelrRequestContext requestContext);
@@ -35,7 +34,7 @@ public interface IDunelrChannel {
      void receiveContext(DunelrRequestContext requestContext);
 
     /**
-     * 根据delta文件更新
+     * 根据文件上下文更新操作
      * @param context 文件信息上下文
      */
     void patch(DunelrContext context);
