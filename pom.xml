@@ -11,6 +11,7 @@
     <modules>
         <module>Dunelr-core</module>
         <module>dunelr-core</module>
+        <module>dunelr-connector-test</module>
     </modules>
 
     <properties>
