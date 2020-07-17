@@ -1,8 +1,8 @@
-package entity.file;
+package file.entity;
 
 import com.google.common.collect.Lists;
-import service.DuneFiles;
-import value.context.IDelta;
+import file.service.DuneFiles;
+import file.value.context.IDelta;
 
 import java.io.IOException;
 import java.nio.file.Path;

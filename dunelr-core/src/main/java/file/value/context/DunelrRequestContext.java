@@ -1,4 +1,4 @@
-package value.context;
+package file.value.context;
 
 import enums.DunelrRequestEnum;
 
@@ -10,12 +10,10 @@ import enums.DunelrRequestEnum;
  */
 public class DunelrRequestContext {
 
-
     /**
      * 消息是否成功发送或者接收
      */
     private final DunelrRequestEnum requestEnum;
-
 
     //<editor-fold desc="builder pattern">
 

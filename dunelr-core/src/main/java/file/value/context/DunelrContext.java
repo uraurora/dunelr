@@ -1,9 +1,7 @@
-package value.context;
+package file.value.context;
 
 import enums.DirectionEnum;
 import enums.DunelrFileEnum;
-
-import java.nio.file.Path;
 
 /**
  * @author : gaoxiaodong04
@@ -26,7 +24,7 @@ public class DunelrContext {
     /**
      * 文件路径，是哪个文件发生了变化
      */
-    private final Path path;
+    private final String path;
 
     /**
      * 发送方的方向，将三种情况统一，如果是source则包含两种情况，为target则只有一种
@@ -48,7 +46,7 @@ public class DunelrContext {
     public static final class DunelrContextBuilder {
         private Object file = null;
         private DunelrFileEnum fileEnum;
-        private Path path;
+        private String path;
         private DirectionEnum direction;
 
         private DunelrContextBuilder() {
@@ -64,7 +62,7 @@ public class DunelrContext {
             return this;
         }
 
-        public DunelrContextBuilder setPath(Path path) {
+        public DunelrContextBuilder setPath(String path) {
             this.path = path;
             return this;
         }
@@ -89,7 +87,7 @@ public class DunelrContext {
         return fileEnum;
     }
 
-    public Path getPath() {
+    public String getPath() {
         return path;
     }
 

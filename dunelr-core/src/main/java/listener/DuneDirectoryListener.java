@@ -1,8 +1,8 @@
-package entity.listener;
+package listener;
 
 import com.google.common.collect.Maps;
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
-import entity.file.DuneDirectory;
+import file.entity.DuneDirectory;
 
 import java.io.IOException;
 import java.nio.file.*;

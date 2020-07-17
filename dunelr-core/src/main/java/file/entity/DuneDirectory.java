@@ -1,6 +1,6 @@
-package entity.file;
+package file.entity;
 
-import entity.listener.DuneDirectoryListener;
+import listener.DuneDirectoryListener;
 
 import java.io.IOException;
 import java.nio.file.*;

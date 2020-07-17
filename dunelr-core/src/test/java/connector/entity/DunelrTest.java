@@ -1,7 +1,7 @@
 package connector.entity;
 
 import com.google.common.collect.Lists;
-import entity.file.Dunelr;
+import file.entity.Dunelr;
 import org.junit.Test;
 
 import java.io.IOException;

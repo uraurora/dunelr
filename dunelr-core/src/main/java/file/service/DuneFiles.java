@@ -1,8 +1,8 @@
-package service;
+package file.service;
 
-import entity.file.DuneFile;
-import entity.file.IDuneFile;
-import value.context.IDelta;
+import file.entity.DuneFile;
+import file.entity.IDuneFile;
+import file.value.context.IDelta;
 
 import java.io.IOException;
 import java.nio.channels.FileChannel;

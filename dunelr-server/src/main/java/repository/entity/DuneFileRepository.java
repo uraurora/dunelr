@@ -1,7 +1,7 @@
 package repository.entity;
 
 import com.google.common.collect.Sets;
-import entity.file.DuneDirectory;
+import file.entity.DuneDirectory;
 
 import java.nio.file.NoSuchFileException;
 import java.nio.file.Path;

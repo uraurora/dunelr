@@ -1,7 +1,7 @@
 package connector.entity;
 
-import entity.file.DuneDirectory;
-import entity.listener.DuneDirectoryListener;
+import file.entity.DuneDirectory;
+import listener.DuneDirectoryListener;
 import org.junit.Test;
 
 import java.io.IOException;

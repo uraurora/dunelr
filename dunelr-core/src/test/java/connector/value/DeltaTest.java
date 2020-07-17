@@ -1,10 +1,10 @@
 package connector.value;
 
-import entity.file.DuneFile;
-import entity.file.IDuneFile;
-import value.context.DuneFileSummary;
-import value.context.IDelta;
-import value.entry.DeltaEntry;
+import file.entity.DuneFile;
+import file.entity.IDuneFile;
+import file.value.context.DuneFileSummary;
+import file.value.context.IDelta;
+import file.value.entry.DeltaEntry;
 import org.junit.Test;
 
 import java.io.BufferedWriter;

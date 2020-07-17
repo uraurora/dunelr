@@ -1,12 +1,12 @@
-package entity.file;
+package file.entity;
 
 import com.google.common.collect.Lists;
 import enums.CheckSumCategory;
-import value.context.Delta;
-import value.context.DuneFileSummary;
-import value.context.IDelta;
-import value.entry.DeltaEntry;
-import value.entry.DuneBlock;
+import file.value.context.Delta;
+import file.value.context.DuneFileSummary;
+import file.value.context.IDelta;
+import file.value.entry.DeltaEntry;
+import file.value.entry.DuneBlock;
 import util.encoder.ConvertUtil;
 
 import java.io.*;
