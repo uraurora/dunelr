@@ -27,7 +27,7 @@ public class DunelrClientInitializer extends ChannelInitializer<Channel> {
         pipeline.addLast(
                 // Http服务端的编解码器
                 new HttpServerCodec(),
-                // 向客户端传输文件的handler，没有加密和压缩的时候效率更高，防止大文件传输的内存溢出
+                // 传输文件的handler，没有加密和压缩的时候效率更高，防止大文件传输的内存溢出
                 new ChunkedWriteHandler(),
                 // Http内容聚合handler，经过此处理后变为FullHttp
                 new HttpObjectAggregator(64 * 1024),
