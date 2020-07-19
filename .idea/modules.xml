@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/dunelr.iml" filepath="$PROJECT_DIR$/dunelr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dunelr-client/dunelr-client.iml" filepath="$PROJECT_DIR$/dunelr-client/dunelr-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dunelr-connector-test/dunelr-connector-test.iml" filepath="$PROJECT_DIR$/dunelr-connector-test/dunelr-connector-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dunelr-core/dunelr-core.iml" filepath="$PROJECT_DIR$/dunelr-core/dunelr-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dunelr-server/dunelr-server.iml" filepath="$PROJECT_DIR$/dunelr-server/dunelr-server.iml" />
+    </modules>
+  </component>
+</project>

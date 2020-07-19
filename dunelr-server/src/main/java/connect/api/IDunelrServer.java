@@ -7,4 +7,9 @@ package connect.api;
  * @description : dunelr的服务器api抽象
  */
 public interface IDunelrServer {
+
+    void start();
+
+    void stop();
+
 }
