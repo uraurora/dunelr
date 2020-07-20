@@ -37,10 +37,13 @@
 
 package client;
 
+import com.google.common.collect.Maps;
 import io.netty.channel.*;
 import io.netty.handler.codec.http.FullHttpResponse;
 import io.netty.handler.codec.http.websocketx.*;
 import io.netty.util.CharsetUtil;
+
+import java.util.HashMap;
 
 public class WebSocketClientHandler extends SimpleChannelInboundHandler<Object> {
 

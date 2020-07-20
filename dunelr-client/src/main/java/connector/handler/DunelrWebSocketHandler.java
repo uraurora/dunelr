@@ -11,11 +11,24 @@ import io.netty.util.CharsetUtil;
  * @date : 2020-07-17 15:02
  * @description : 处理websocket二进制数据帧的handler
  */
-public class DunelrWebSocketHandler extends SimpleChannelInboundHandler<BinaryWebSocketFrame> {
+public class DunelrWebSocketHandler extends SimpleChannelInboundHandler<WebSocketFrame> {
 
 
     @Override
-    protected void channelRead0(ChannelHandlerContext ctx, BinaryWebSocketFrame msg) throws Exception {
+    protected void channelRead0(ChannelHandlerContext ctx, WebSocketFrame msg) throws Exception {
+        if(msg instanceof BinaryWebSocketFrame){
+            handleBinaryWebSocketFrame(ctx, msg);
+        }
+        else if(msg instanceof TextWebSocketFrame){
+            handleTextWebSocketFrame(ctx, msg);
+        }
+    }
+
+    private void handleTextWebSocketFrame(ChannelHandlerContext ctx, WebSocketFrame msg) {
+
+    }
+
+    private void handleBinaryWebSocketFrame(ChannelHandlerContext ctx, WebSocketFrame msg) {
 
     }
 }

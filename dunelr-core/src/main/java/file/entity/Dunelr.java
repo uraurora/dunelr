@@ -3,6 +3,8 @@ package file.entity;
 import com.google.common.collect.Lists;
 import file.service.DuneFiles;
 import file.value.context.IDelta;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
 import java.nio.file.Path;
@@ -15,6 +17,8 @@ import java.util.List;
  * @description : dunelr文件同步工具，完成抽象文件的同步工作
  */
 public class Dunelr {
+
+    private static final Logger logger = LogManager.getLogger(Dunelr.class);
 
     private final IDuneFile source;
 
@@ -92,7 +96,6 @@ public class Dunelr {
                 res.add(DuneFiles.plus(tar, delta));
             }
         }
-
         return res;
     }
 

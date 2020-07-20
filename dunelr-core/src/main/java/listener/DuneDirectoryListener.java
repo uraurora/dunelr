@@ -3,6 +3,10 @@ package listener;
 import com.google.common.collect.Maps;
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import file.entity.DuneDirectory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.message.Message;
+import org.apache.logging.log4j.message.MessageFactory;
 
 import java.io.IOException;
 import java.nio.file.*;
@@ -18,6 +22,10 @@ import java.util.concurrent.ThreadFactory;
  */
 public class DuneDirectoryListener {
 
+    private static final Logger logger = LogManager.getLogger(DuneDirectoryListener.class);
+
+    private String root;
+
     private final WatchService watchService;
     /**
      * 线程工厂
@@ -30,6 +38,7 @@ public class DuneDirectoryListener {
 
     private DuneDirectoryListener(DuneDirectory directory, ThreadFactory factory) throws IOException {
         Path path = directory.getPath();
+        this.root = path.toString();
         this.watchService = path.getFileSystem().newWatchService();
         this.factory = factory;
         keys = Maps.newHashMap();
@@ -75,6 +84,7 @@ public class DuneDirectoryListener {
                     WatchEvent<Path> event = (WatchEvent<Path>) ev;
                     if (ev.kind() == StandardWatchEventKinds.OVERFLOW) {
                         //事件可能lost or discarded
+                        logger.info(event + "事件丢失");
                         continue;
                     }
                     // 如果创建新目录，则注册所有子目录
@@ -100,7 +110,7 @@ public class DuneDirectoryListener {
                     }
                 }
             } catch (InterruptedException | IOException e) {
-                // TODO:logger
+                logger.info("Dunelr文件目录" + root + " 发生监听事件异常:" + e.toString());
                 return;
             }
         }

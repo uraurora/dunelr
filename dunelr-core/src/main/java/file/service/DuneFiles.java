@@ -3,6 +3,8 @@ package file.service;
 import file.entity.DuneFile;
 import file.entity.IDuneFile;
 import file.value.context.IDelta;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
 import java.nio.channels.FileChannel;
@@ -16,7 +18,7 @@ import java.util.EnumSet;
  * @description : 执行DeltaFile的识别与处理
  */
 public abstract class DuneFiles {
-    // TODO:logger
+    private static final Logger logger = LogManager.getLogger(DuneFiles.class);
 
     /**
      * 获取DuneFile实例，如果不存在则报异常
@@ -45,7 +47,7 @@ public abstract class DuneFiles {
             }
             res = DuneFile.newInstance(path);
         } catch (IOException e) {
-            e.printStackTrace();
+            logger.error(path.toString() + "文件发生异常：" + e);
         }
         return res;
     }
@@ -61,7 +63,7 @@ public abstract class DuneFiles {
         try {
             res = duneFile.plus(deltaFile);
         } catch (IOException e) {
-            e.printStackTrace();
+            logger.error(duneFile.getPath().toString() + "文件发生异常：" + e);
         }
         return res;
     }
@@ -71,7 +73,7 @@ public abstract class DuneFiles {
         try {
             res = source.delta(target.toSummary());
         } catch (IOException e) {
-            e.printStackTrace();
+            logger.error(source.getPath().toString() + "source文件同步" + target + "target文件时发生异常：" + e);
         }
         return res;
     }
