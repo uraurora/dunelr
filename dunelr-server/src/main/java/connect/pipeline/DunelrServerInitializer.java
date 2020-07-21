@@ -1,13 +1,12 @@
 package connect.pipeline;
 
-import connect.handler.DunelrHttpRequestHandler;
-import connect.handler.DunelrWebSocketHandler;
-import io.netty.channel.Channel;
-import io.netty.channel.ChannelInitializer;
-import io.netty.channel.ChannelPipeline;
+import connect.handler.DunelrServerWebSocketHandler;
+import io.netty.buffer.ByteBuf;
+import io.netty.channel.*;
 import io.netty.handler.codec.http.HttpObjectAggregator;
 import io.netty.handler.codec.http.HttpServerCodec;
 import io.netty.handler.codec.http.websocketx.WebSocketServerProtocolHandler;
+import io.netty.handler.codec.http.websocketx.extensions.compression.WebSocketServerCompressionHandler;
 import io.netty.handler.stream.ChunkedWriteHandler;
 
 /**
@@ -34,12 +33,14 @@ public class DunelrServerInitializer extends ChannelInitializer<Channel> {
                 new ChunkedWriteHandler(),
                 // Http内容聚合handler，经过此处理后变为FullHttp
                 new HttpObjectAggregator(64 * 1024),
+                // 压缩
+                new WebSocketServerCompressionHandler(),
                 // 处理HttpRequest的业务
-                DunelrHttpRequestHandler.newInstance(),
+                // DunelrHttpRequestHandler.newInstance(),
                 // 运行WebSocket服务器大部分工作的handler
                 new WebSocketServerProtocolHandler(WEBSOCKET_PATH, null, true),
                 //  处理webSocket相关业务的handler
-                DunelrWebSocketHandler.newInstance()
+                DunelrServerWebSocketHandler.newInstance()
         );
     }
 }

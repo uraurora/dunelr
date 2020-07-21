@@ -1,5 +1,6 @@
 package connect.bootstrap;
 
+import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import connect.api.IDunelrServer;
 import connect.pipeline.DunelrServerInitializer;
 import io.netty.bootstrap.ServerBootstrap;
@@ -50,13 +51,11 @@ public class DunelrServer implements IDunelrServer {
 
     public static final class DunelrServerBuilder {
         private int port;
-        private ThreadFactory threadFactory;
+        private ThreadFactory threadFactory = new ThreadFactoryBuilder()
+                .setNameFormat("Dunelr-netty-server-%d")
+                .build();
 
         private DunelrServerBuilder() {
-        }
-
-        public static DunelrServerBuilder aDunelrServer() {
-            return new DunelrServerBuilder();
         }
 
         public DunelrServerBuilder port(int port) {
@@ -73,19 +72,23 @@ public class DunelrServer implements IDunelrServer {
             return new DunelrServer(this);
         }
     }
+
+    public static DunelrServerBuilder builder(){
+        return new DunelrServerBuilder();
+    }
     //</editor-fold>
 
     @Override
     public void start() {
         init();
+        // add hook，release resource when jvm close
         Runtime.getRuntime().addShutdownHook(threadFactory.newThread(this::stop));
-        channel.closeFuture().syncUninterruptibly();
     }
 
     @Override
     public void stop(){
         if (channel != null) {
-            channel.close();
+            channel.closeFuture().syncUninterruptibly();
         }
         bossGroup.shutdownGracefully();
         workerGroup.shutdownGracefully();
@@ -107,4 +110,11 @@ public class DunelrServer implements IDunelrServer {
     }
 
 
+    public static void main(String[] args) {
+        DunelrServer server = DunelrServer.builder()
+                .port(8080)
+                .build();
+        server.start();
+
+    }
 }
