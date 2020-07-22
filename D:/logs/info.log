@@ -1,222 +1,171 @@
-2020-07-21 11:54:23.176 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xbfffad0b] REGISTERED
-2020-07-21 11:54:23.178 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xbfffad0b] BIND: 0.0.0.0/0.0.0.0:8080
-2020-07-21 11:54:23.185 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xbfffad0b, L:/0:0:0:0:0:0:0:0:8080] ACTIVE
-2020-07-21 11:58:42.126 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xbfffad0b, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0xb6ada5a2, L:/127.0.0.1:8080 - R:/127.0.0.1:52080]
-2020-07-21 11:58:42.127 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xbfffad0b, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 12:00:27.135 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xbfffad0b, L:/0:0:0:0:0:0:0:0:8080] CLOSE
-2020-07-21 12:00:30.074 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x933f810b] REGISTERED
-2020-07-21 12:00:30.075 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x933f810b] BIND: 0.0.0.0/0.0.0.0:8080
-2020-07-21 12:00:30.080 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x933f810b, L:/0:0:0:0:0:0:0:0:8080] ACTIVE
-2020-07-21 12:00:36.156 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x933f810b, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0x55c4677c, L:/127.0.0.1:8080 - R:/127.0.0.1:52154]
-2020-07-21 12:00:36.157 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x933f810b, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 14:07:46.843 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x933f810b, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0xd30d93c9, L:/127.0.0.1:8080 - R:/127.0.0.1:52583]
-2020-07-21 14:07:46.844 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x933f810b, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 14:08:51.185 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x933f810b, L:/0:0:0:0:0:0:0:0:8080] CLOSE
-2020-07-21 14:08:51.185 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x933f810b, L:/0:0:0:0:0:0:0:0:8080] INACTIVE
-2020-07-21 14:08:51.186 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x933f810b, L:/0:0:0:0:0:0:0:0:8080] UNREGISTERED
-2020-07-21 14:10:14.217 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x37ebbad6] REGISTERED
-2020-07-21 14:10:14.219 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x37ebbad6] BIND: 0.0.0.0/0.0.0.0:8080
-2020-07-21 14:10:14.223 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x37ebbad6, L:/0:0:0:0:0:0:0:0:8080] ACTIVE
-2020-07-21 14:10:17.313 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x37ebbad6, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0x89e6d93b, L:/127.0.0.1:8080 - R:/127.0.0.1:52602]
-2020-07-21 14:10:17.314 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x37ebbad6, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 14:17:05.671 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x37ebbad6, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0x31d306af, L:/127.0.0.1:8080 - R:/127.0.0.1:52636]
-2020-07-21 14:17:05.672 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x37ebbad6, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 14:46:43.641 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x37ebbad6, L:/0:0:0:0:0:0:0:0:8080] CLOSE
-2020-07-21 14:46:43.642 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x37ebbad6, L:/0:0:0:0:0:0:0:0:8080] INACTIVE
-2020-07-21 14:46:43.642 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x37ebbad6, L:/0:0:0:0:0:0:0:0:8080] UNREGISTERED
-2020-07-21 14:46:57.284 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x9c69a5da] REGISTERED
-2020-07-21 14:46:57.286 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x9c69a5da] BIND: 0.0.0.0/0.0.0.0:8080
-2020-07-21 14:46:57.292 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x9c69a5da, L:/0:0:0:0:0:0:0:0:8080] ACTIVE
-2020-07-21 14:47:01.600 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x9c69a5da, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0xa13d1048, L:/127.0.0.1:8080 - R:/127.0.0.1:53151]
-2020-07-21 14:47:01.601 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x9c69a5da, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 14:48:27.310 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x9c69a5da, L:/0:0:0:0:0:0:0:0:8080] CLOSE
-2020-07-21 14:48:33.626 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x8eabba60] REGISTERED
-2020-07-21 14:48:33.627 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x8eabba60] BIND: 0.0.0.0/0.0.0.0:8080
-2020-07-21 14:48:33.632 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x8eabba60, L:/0:0:0:0:0:0:0:0:8080] ACTIVE
-2020-07-21 14:48:36.359 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x8eabba60, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0xe857cdd0, L:/127.0.0.1:8080 - R:/127.0.0.1:53172]
-2020-07-21 14:48:36.360 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x8eabba60, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 15:07:19.876 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x8eabba60, L:/0:0:0:0:0:0:0:0:8080] CLOSE
-2020-07-21 15:13:26.980 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x2c8c40b3] REGISTERED
-2020-07-21 15:13:26.982 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x2c8c40b3] BIND: 0.0.0.0/0.0.0.0:8080
-2020-07-21 15:13:26.988 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x2c8c40b3, L:/0:0:0:0:0:0:0:0:8080] ACTIVE
-2020-07-21 15:13:32.870 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x2c8c40b3, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0xcbdd703e, L:/127.0.0.1:8080 - R:/127.0.0.1:53545]
-2020-07-21 15:13:32.872 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x2c8c40b3, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 15:14:11.741 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x69e08fd5] REGISTERED
-2020-07-21 15:14:11.744 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x69e08fd5] BIND: 0.0.0.0/0.0.0.0:8080
-2020-07-21 15:14:11.752 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x69e08fd5, L:/0:0:0:0:0:0:0:0:8080] ACTIVE
-2020-07-21 15:14:22.237 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x69e08fd5, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0xbd87d18b, L:/127.0.0.1:8080 - R:/127.0.0.1:53564]
-2020-07-21 15:14:22.238 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x69e08fd5, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 15:15:04.147 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x69e08fd5, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0x38c8626d, L:/127.0.0.1:8080 - R:/127.0.0.1:53573]
-2020-07-21 15:15:04.148 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x69e08fd5, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 15:17:02.340 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x69e08fd5, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0x5635866c, L:/127.0.0.1:8080 - R:/127.0.0.1:53587]
-2020-07-21 15:17:02.341 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x69e08fd5, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 15:17:12.860 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x69e08fd5, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0xe89ec4c5, L:/127.0.0.1:8080 - R:/127.0.0.1:53590]
-2020-07-21 15:17:12.860 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x69e08fd5, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 15:17:12.861 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x69e08fd5, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0x88524bc7, L:/127.0.0.1:8080 - R:/127.0.0.1:53591]
-2020-07-21 15:17:12.862 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x69e08fd5, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 15:20:03.429 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x6cbadb53] REGISTERED
-2020-07-21 15:20:03.431 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x6cbadb53] BIND: 0.0.0.0/0.0.0.0:8080
-2020-07-21 15:20:03.438 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x6cbadb53, L:/0:0:0:0:0:0:0:0:8080] ACTIVE
-2020-07-21 15:20:16.046 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x6cbadb53, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0xd82df12c, L:/127.0.0.1:8080 - R:/127.0.0.1:53613]
-2020-07-21 15:20:16.048 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x6cbadb53, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 15:21:46.274 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x6cbadb53, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0xa2bcde14, L:/127.0.0.1:8080 - R:/127.0.0.1:53626]
-2020-07-21 15:21:46.274 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x6cbadb53, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 15:21:49.497 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x252f04f4] REGISTERED
-2020-07-21 15:21:49.499 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x252f04f4] BIND: 0.0.0.0/0.0.0.0:8080
-2020-07-21 15:21:49.505 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x252f04f4, L:/0:0:0:0:0:0:0:0:8080] ACTIVE
-2020-07-21 15:22:06.535 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x252f04f4, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0x2f63272b, L:/127.0.0.1:8080 - R:/127.0.0.1:53643]
-2020-07-21 15:22:06.537 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x252f04f4, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 15:23:06.268 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xf7858e89] REGISTERED
-2020-07-21 15:23:06.270 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xf7858e89] BIND: 0.0.0.0/0.0.0.0:8080
-2020-07-21 15:23:06.276 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xf7858e89, L:/0:0:0:0:0:0:0:0:8080] ACTIVE
-2020-07-21 15:23:12.375 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xf7858e89, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0x599b579a, L:/127.0.0.1:8080 - R:/127.0.0.1:53660]
-2020-07-21 15:23:12.376 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xf7858e89, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 15:29:17.798 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xf682a3ca] REGISTERED
-2020-07-21 15:29:17.800 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xf682a3ca] BIND: 0.0.0.0/0.0.0.0:8080
-2020-07-21 15:29:17.806 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xf682a3ca, L:/0:0:0:0:0:0:0:0:8080] ACTIVE
-2020-07-21 15:29:22.025 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xf682a3ca, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0xb9e15412, L:/127.0.0.1:8080 - R:/127.0.0.1:53699]
-2020-07-21 15:29:22.026 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xf682a3ca, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 15:35:04.029 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xf682a3ca, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0x907f472e, L:/127.0.0.1:8080 - R:/127.0.0.1:53729]
-2020-07-21 15:35:04.030 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xf682a3ca, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 15:35:22.281 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x4f87461a] REGISTERED
-2020-07-21 15:35:22.282 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x4f87461a] BIND: 0.0.0.0/0.0.0.0:8080
-2020-07-21 15:35:22.287 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x4f87461a, L:/0:0:0:0:0:0:0:0:8080] ACTIVE
-2020-07-21 15:35:25.844 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x4f87461a, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0xd38f4dcf, L:/127.0.0.1:8080 - R:/127.0.0.1:53740]
-2020-07-21 15:35:25.846 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x4f87461a, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 15:36:29.332 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x4f87461a, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0x6fa2316d, L:/127.0.0.1:8080 - R:/127.0.0.1:53748]
-2020-07-21 15:36:29.333 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x4f87461a, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 15:37:40.282 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x4f87461a, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0x93d985f0, L:/127.0.0.1:8080 - R:/127.0.0.1:53815]
-2020-07-21 15:37:40.283 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x4f87461a, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 15:37:40.283 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x4f87461a, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0x49e14e3b, L:/127.0.0.1:8080 - R:/127.0.0.1:53816]
-2020-07-21 15:37:40.284 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x4f87461a, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 15:39:11.181 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x4f87461a, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0xfaa1f0f8, L:/127.0.0.1:8080 - R:/127.0.0.1:53883]
-2020-07-21 15:39:11.182 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x4f87461a, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 15:39:38.885 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x4f87461a, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0xec054695, L:/127.0.0.1:8080 - R:/127.0.0.1:53890]
-2020-07-21 15:39:38.885 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x4f87461a, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 15:40:23.228 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x4f87461a, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0xef88c3b4, L:/127.0.0.1:8080 - R:/127.0.0.1:53898]
-2020-07-21 15:40:23.228 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x4f87461a, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 15:42:47.995 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x1408c9a8] REGISTERED
-2020-07-21 15:42:47.997 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x1408c9a8] BIND: 0.0.0.0/0.0.0.0:8080
-2020-07-21 15:42:48.003 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x1408c9a8, L:/0:0:0:0:0:0:0:0:8080] ACTIVE
-2020-07-21 15:42:53.569 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x1408c9a8, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0x13db6bbf, L:/127.0.0.1:8080 - R:/127.0.0.1:53929]
-2020-07-21 15:42:53.570 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x1408c9a8, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 15:59:38.203 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xbd922428] REGISTERED
-2020-07-21 15:59:38.205 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xbd922428] BIND: 0.0.0.0/0.0.0.0:8080
-2020-07-21 15:59:38.210 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xbd922428, L:/0:0:0:0:0:0:0:0:8080] ACTIVE
-2020-07-21 15:59:55.299 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xbd922428, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0xa703ab6c, L:/127.0.0.1:8080 - R:/127.0.0.1:54146]
-2020-07-21 15:59:55.300 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xbd922428, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 16:00:57.116 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x3996a243] REGISTERED
-2020-07-21 16:00:57.117 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x3996a243] BIND: 0.0.0.0/0.0.0.0:8080
-2020-07-21 16:00:57.122 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x3996a243, L:/0:0:0:0:0:0:0:0:8080] ACTIVE
-2020-07-21 16:01:07.676 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x8df26059] REGISTERED
-2020-07-21 16:01:07.678 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x8df26059] BIND: 0.0.0.0/0.0.0.0:8080
-2020-07-21 16:01:07.683 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x8df26059, L:/0:0:0:0:0:0:0:0:8080] ACTIVE
-2020-07-21 16:01:15.523 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x8df26059, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0x1518115e, L:/127.0.0.1:8080 - R:/127.0.0.1:54164]
-2020-07-21 16:01:15.524 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x8df26059, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 16:20:46.573 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x9a036811] REGISTERED
-2020-07-21 16:20:46.574 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x9a036811] BIND: 0.0.0.0/0.0.0.0:8080
-2020-07-21 16:20:46.580 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x9a036811, L:/0:0:0:0:0:0:0:0:8080] ACTIVE
-2020-07-21 16:20:54.837 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x9a036811, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0x6b5ff5af, L:/127.0.0.1:8080 - R:/127.0.0.1:54341]
-2020-07-21 16:20:54.838 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x9a036811, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 16:21:33.773 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x9a036811, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0x74a559b9, L:/127.0.0.1:8080 - R:/127.0.0.1:54370]
-2020-07-21 16:21:33.773 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x9a036811, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 16:24:25.181 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x9a036811, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0x8e9396d0, L:/127.0.0.1:8080 - R:/127.0.0.1:54445]
-2020-07-21 16:24:25.181 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x9a036811, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 16:24:51.211 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x9a036811, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0x443da504, L:/127.0.0.1:8080 - R:/127.0.0.1:54469]
-2020-07-21 16:24:51.212 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x9a036811, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 16:30:26.561 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x9a036811, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0x4b65cc89, L:/127.0.0.1:8080 - R:/127.0.0.1:54726]
-2020-07-21 16:30:26.561 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x9a036811, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 16:32:21.845 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x9a036811, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0x49bfe9d5, L:/127.0.0.1:8080 - R:/127.0.0.1:54742]
-2020-07-21 16:32:21.846 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x9a036811, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 16:41:53.542 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x9a036811, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0xd8a3b7a2, L:/127.0.0.1:8080 - R:/127.0.0.1:54794]
-2020-07-21 16:41:53.542 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x9a036811, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 16:42:08.462 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x9a036811, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0x47d4602e, L:/127.0.0.1:8080 - R:/127.0.0.1:54804]
-2020-07-21 16:42:08.463 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x9a036811, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 16:44:10.584 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x9a036811, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0x2c0f2bf5, L:/127.0.0.1:8080 - R:/127.0.0.1:54818]
-2020-07-21 16:44:10.584 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x9a036811, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 16:46:00.075 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x4e16c97a] REGISTERED
-2020-07-21 16:46:00.076 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x4e16c97a] BIND: 0.0.0.0/0.0.0.0:8080
-2020-07-21 16:46:00.081 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x4e16c97a, L:/0:0:0:0:0:0:0:0:8080] ACTIVE
-2020-07-21 16:46:12.291 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x620ebca8] REGISTERED
-2020-07-21 16:46:12.293 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x620ebca8] BIND: 0.0.0.0/0.0.0.0:8080
-2020-07-21 16:46:12.299 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x620ebca8, L:/0:0:0:0:0:0:0:0:8080] ACTIVE
-2020-07-21 16:46:40.658 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x620ebca8, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0xd887c82d, L:/127.0.0.1:8080 - R:/127.0.0.1:54846]
-2020-07-21 16:46:40.659 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x620ebca8, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 16:47:19.383 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x620ebca8, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0xefb68db1, L:/127.0.0.1:8080 - R:/127.0.0.1:54855]
-2020-07-21 16:47:19.383 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x620ebca8, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 16:53:17.157 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x620ebca8, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0x1cc49e30, L:/127.0.0.1:8080 - R:/127.0.0.1:54939]
-2020-07-21 16:53:17.157 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x620ebca8, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 16:53:17.158 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x620ebca8, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0x9558a3e1, L:/127.0.0.1:8080 - R:/127.0.0.1:54940]
-2020-07-21 16:53:17.159 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x620ebca8, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 16:56:25.992 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x620ebca8, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0x7b7eaea3, L:/127.0.0.1:8080 - R:/127.0.0.1:55001]
-2020-07-21 16:56:25.992 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x620ebca8, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 17:06:53.646 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x620ebca8, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0x7ec4117f, L:/127.0.0.1:8080 - R:/127.0.0.1:55070]
-2020-07-21 17:06:53.647 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x620ebca8, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 17:11:18.450 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x620ebca8, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0x6e9a0982, L:/127.0.0.1:8080 - R:/127.0.0.1:55108]
-2020-07-21 17:11:18.451 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x620ebca8, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 17:14:12.926 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x620ebca8, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0x9e14f9c9, L:/127.0.0.1:8080 - R:/127.0.0.1:55140]
-2020-07-21 17:14:12.927 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x620ebca8, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 17:14:52.274 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x620ebca8, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0xe4908c5e, L:/127.0.0.1:8080 - R:/127.0.0.1:55147]
-2020-07-21 17:14:52.275 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x620ebca8, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 17:15:32.218 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x3993b7cd] REGISTERED
-2020-07-21 17:15:32.220 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x3993b7cd] BIND: 0.0.0.0/0.0.0.0:8080
-2020-07-21 17:15:32.225 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x3993b7cd, L:/0:0:0:0:0:0:0:0:8080] ACTIVE
-2020-07-21 17:15:39.196 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x3993b7cd, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0x6bc40447, L:/127.0.0.1:8080 - R:/127.0.0.1:55163]
-2020-07-21 17:15:39.197 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x3993b7cd, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 17:16:53.955 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x3993b7cd, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0xcf6e0840, L:/127.0.0.1:8080 - R:/127.0.0.1:55173]
-2020-07-21 17:16:53.955 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x3993b7cd, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 17:17:22.549 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x42e0c47f] REGISTERED
-2020-07-21 17:17:22.551 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x42e0c47f] BIND: 0.0.0.0/0.0.0.0:8080
-2020-07-21 17:17:22.556 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x42e0c47f, L:/0:0:0:0:0:0:0:0:8080] ACTIVE
-2020-07-21 17:17:33.569 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x42e0c47f, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0x0803eb1b, L:/127.0.0.1:8080 - R:/127.0.0.1:55188]
-2020-07-21 17:17:33.570 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x42e0c47f, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 17:22:26.360 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x42e0c47f, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0xe35138ed, L:/127.0.0.1:8080 - R:/127.0.0.1:55362]
-2020-07-21 17:22:26.360 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x42e0c47f, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 17:24:00.126 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x5393a8d7] REGISTERED
-2020-07-21 17:24:00.127 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x5393a8d7] BIND: 0.0.0.0/0.0.0.0:8080
-2020-07-21 17:24:00.132 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x5393a8d7, L:/0:0:0:0:0:0:0:0:8080] ACTIVE
-2020-07-21 17:24:12.149 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x5393a8d7, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0x8baa2c03, L:/127.0.0.1:8080 - R:/127.0.0.1:55387]
-2020-07-21 17:24:12.150 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x5393a8d7, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 17:26:06.457 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x5393a8d7, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0x0391a1a2, L:/127.0.0.1:8080 - R:/127.0.0.1:55397]
-2020-07-21 17:26:06.457 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x5393a8d7, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 17:26:06.466 [nioEventLoopGroup-2-1] WARN  io.netty.channel.DefaultChannelPipeline - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
-java.lang.NullPointerException: value
-	at io.netty.util.internal.ObjectUtil.checkNotNull(ObjectUtil.java:33) ~[netty-all-4.1.50.Final.jar:4.1.50.Final]
-	at io.netty.handler.codec.DefaultHeaders.setObject(DefaultHeaders.java:479) ~[netty-all-4.1.50.Final.jar:4.1.50.Final]
-	at io.netty.handler.codec.http.DefaultHttpHeaders.set(DefaultHttpHeaders.java:183) ~[netty-all-4.1.50.Final.jar:4.1.50.Final]
-	at io.netty.handler.codec.http.websocketx.WebSocketClientHandshaker13.newHandshakeRequest(WebSocketClientHandshaker13.java:228) ~[netty-all-4.1.50.Final.jar:4.1.50.Final]
-	at io.netty.handler.codec.http.websocketx.WebSocketClientHandshaker.handshake(WebSocketClientHandshaker.java:261) ~[netty-all-4.1.50.Final.jar:4.1.50.Final]
-	at io.netty.handler.codec.http.websocketx.WebSocketClientHandshaker.handshake(WebSocketClientHandshaker.java:238) ~[netty-all-4.1.50.Final.jar:4.1.50.Final]
-	at io.netty.handler.codec.http.websocketx.WebSocketClientProtocolHandshakeHandler.channelActive(WebSocketClientProtocolHandshakeHandler.java:58) ~[netty-all-4.1.50.Final.jar:4.1.50.Final]
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelActive(AbstractChannelHandlerContext.java:230) [netty-all-4.1.50.Final.jar:4.1.50.Final]
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelActive(AbstractChannelHandlerContext.java:216) [netty-all-4.1.50.Final.jar:4.1.50.Final]
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelActive(AbstractChannelHandlerContext.java:209) [netty-all-4.1.50.Final.jar:4.1.50.Final]
-	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelActive(CombinedChannelDuplexHandler.java:412) [netty-all-4.1.50.Final.jar:4.1.50.Final]
-	at io.netty.channel.ChannelInboundHandlerAdapter.channelActive(ChannelInboundHandlerAdapter.java:69) [netty-all-4.1.50.Final.jar:4.1.50.Final]
-	at io.netty.channel.CombinedChannelDuplexHandler.channelActive(CombinedChannelDuplexHandler.java:211) [netty-all-4.1.50.Final.jar:4.1.50.Final]
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelActive(AbstractChannelHandlerContext.java:230) [netty-all-4.1.50.Final.jar:4.1.50.Final]
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelActive(AbstractChannelHandlerContext.java:216) [netty-all-4.1.50.Final.jar:4.1.50.Final]
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelActive(AbstractChannelHandlerContext.java:209) [netty-all-4.1.50.Final.jar:4.1.50.Final]
-	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelActive(DefaultChannelPipeline.java:1398) [netty-all-4.1.50.Final.jar:4.1.50.Final]
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelActive(AbstractChannelHandlerContext.java:230) [netty-all-4.1.50.Final.jar:4.1.50.Final]
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelActive(AbstractChannelHandlerContext.java:216) [netty-all-4.1.50.Final.jar:4.1.50.Final]
-	at io.netty.channel.DefaultChannelPipeline.fireChannelActive(DefaultChannelPipeline.java:895) [netty-all-4.1.50.Final.jar:4.1.50.Final]
-	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.fulfillConnectPromise(AbstractNioChannel.java:305) [netty-all-4.1.50.Final.jar:4.1.50.Final]
-	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:335) [netty-all-4.1.50.Final.jar:4.1.50.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:702) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+2020-07-22 10:03:14.096 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x9e8832ae] REGISTERED
+2020-07-22 10:03:14.110 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x9e8832ae] BIND: 0.0.0.0/0.0.0.0:8080
+2020-07-22 10:03:14.116 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x9e8832ae, L:/0:0:0:0:0:0:0:0:8080] ACTIVE
+2020-07-22 10:03:21.498 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x9e8832ae, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0x0746ee5f, L:/127.0.0.1:8080 - R:/127.0.0.1:63427]
+2020-07-22 10:03:21.499 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x9e8832ae, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
+2020-07-22 10:05:52.903 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x9e8832ae, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0x1b7c7f55, L:/127.0.0.1:8080 - R:/127.0.0.1:63521]
+2020-07-22 10:05:52.904 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x9e8832ae, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
+2020-07-22 10:06:49.215 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x0a89ce5a] REGISTERED
+2020-07-22 10:06:49.217 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x0a89ce5a] BIND: 0.0.0.0/0.0.0.0:8080
+2020-07-22 10:06:49.222 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x0a89ce5a, L:/0:0:0:0:0:0:0:0:8080] ACTIVE
+2020-07-22 10:06:52.306 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x0a89ce5a, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0xb33d7518, L:/127.0.0.1:8080 - R:/127.0.0.1:63630]
+2020-07-22 10:06:52.307 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x0a89ce5a, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
+2020-07-22 10:09:47.450 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x0a89ce5a, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0xec0c3e0d, L:/127.0.0.1:8080 - R:/127.0.0.1:63806]
+2020-07-22 10:09:47.450 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x0a89ce5a, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
+2020-07-22 10:10:23.099 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x0a89ce5a, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0x4192b544, L:/127.0.0.1:8080 - R:/127.0.0.1:63837]
+2020-07-22 10:10:23.100 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x0a89ce5a, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
+2020-07-22 10:14:12.279 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xe085631b] REGISTERED
+2020-07-22 10:14:12.281 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xe085631b] BIND: 0.0.0.0/0.0.0.0:8080
+2020-07-22 10:14:12.286 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xe085631b, L:/0:0:0:0:0:0:0:0:8080] ACTIVE
+2020-07-22 10:14:16.551 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xe085631b, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0x78ba296c, L:/127.0.0.1:8080 - R:/127.0.0.1:64000]
+2020-07-22 10:14:16.553 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xe085631b, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
+2020-07-22 11:08:47.289 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x7eb18f0c] REGISTERED
+2020-07-22 11:08:47.291 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x7eb18f0c] BIND: 0.0.0.0/0.0.0.0:8080
+2020-07-22 11:08:47.296 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x7eb18f0c, L:/0:0:0:0:0:0:0:0:8080] ACTIVE
+2020-07-22 11:08:55.462 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x7eb18f0c, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0xa95bb1f7, L:/127.0.0.1:8080 - R:/127.0.0.1:64988]
+2020-07-22 11:08:55.464 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x7eb18f0c, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
+2020-07-22 11:09:50.857 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xa9b9156b] REGISTERED
+2020-07-22 11:09:50.860 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xa9b9156b] BIND: 0.0.0.0/0.0.0.0:8080
+2020-07-22 11:09:50.866 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xa9b9156b, L:/0:0:0:0:0:0:0:0:8080] ACTIVE
+2020-07-22 11:09:57.031 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xa9b9156b, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0xd7757533, L:/127.0.0.1:8080 - R:/127.0.0.1:65064]
+2020-07-22 11:09:57.032 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xa9b9156b, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
+2020-07-22 11:10:53.949 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xa9b9156b, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0xc4ccb595, L:/127.0.0.1:8080 - R:/127.0.0.1:65102]
+2020-07-22 11:10:53.950 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xa9b9156b, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
+2020-07-22 11:14:05.806 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xa9b9156b, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0xfa3d45a7, L:/127.0.0.1:8080 - R:/127.0.0.1:65142]
+2020-07-22 11:14:05.806 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xa9b9156b, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
+2020-07-22 11:14:25.343 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xa9b9156b, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0xaad6fc31, L:/127.0.0.1:8080 - R:/127.0.0.1:65149]
+2020-07-22 11:14:25.344 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xa9b9156b, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
+2020-07-22 11:14:40.307 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xa9b9156b, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0x7f10c2b2, L:/127.0.0.1:8080 - R:/127.0.0.1:65155]
+2020-07-22 11:14:40.307 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xa9b9156b, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
+2020-07-22 11:14:50.546 [Dunelr-netty-server-6] WARN  io.netty.channel.DefaultChannelPipeline - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.codec.http.websocketx.CorruptedWebSocketFrameException: received a frame that is not masked as expected
+	at io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder.protocolViolation(WebSocket08FrameDecoder.java:426) ~[netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder.protocolViolation(WebSocket08FrameDecoder.java:422) ~[netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder.decode(WebSocket08FrameDecoder.java:202) ~[netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:501) ~[netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:440) ~[netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:276) ~[netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:163) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714) [netty-all-4.1.50.Final.jar:4.1.50.Final]
 	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650) [netty-all-4.1.50.Final.jar:4.1.50.Final]
 	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576) [netty-all-4.1.50.Final.jar:4.1.50.Final]
 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493) [netty-all-4.1.50.Final.jar:4.1.50.Final]
 	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989) [netty-all-4.1.50.Final.jar:4.1.50.Final]
 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-all-4.1.50.Final.jar:4.1.50.Final]
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-all-4.1.50.Final.jar:4.1.50.Final]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
-2020-07-21 18:00:19.985 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x5393a8d7, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0xb38d1f52, L:/127.0.0.1:8080 - R:/127.0.0.1:55944]
-2020-07-21 18:00:19.986 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x5393a8d7, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 19:07:56.490 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x74daaee0] REGISTERED
-2020-07-21 19:07:56.492 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x74daaee0] BIND: 0.0.0.0/0.0.0.0:8080
-2020-07-21 19:07:56.496 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x74daaee0, L:/0:0:0:0:0:0:0:0:8080] ACTIVE
-2020-07-21 19:08:36.389 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x74daaee0, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0x24484ca7, L:/127.0.0.1:8080 - R:/127.0.0.1:57740]
-2020-07-21 19:08:36.391 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x74daaee0, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
-2020-07-21 21:01:14.902 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x74daaee0, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0x44881c58, L:/127.0.0.1:8080 - R:/127.0.0.1:60191]
-2020-07-21 21:01:14.905 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0x74daaee0, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
+2020-07-22 11:15:19.044 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xa9b9156b, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0xcd742d08, L:/127.0.0.1:8080 - R:/127.0.0.1:65169]
+2020-07-22 11:15:19.045 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xa9b9156b, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
+2020-07-22 11:15:50.888 [Dunelr-netty-server-7] WARN  io.netty.channel.DefaultChannelPipeline - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.codec.http.websocketx.CorruptedWebSocketFrameException: received a frame that is not masked as expected
+	at io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder.protocolViolation(WebSocket08FrameDecoder.java:426) ~[netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder.protocolViolation(WebSocket08FrameDecoder.java:422) ~[netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder.decode(WebSocket08FrameDecoder.java:202) ~[netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:501) ~[netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:440) ~[netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:276) ~[netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:163) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
+2020-07-22 11:16:13.796 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xa9b9156b, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0xf64ee283, L:/127.0.0.1:8080 - R:/127.0.0.1:65176]
+2020-07-22 11:16:13.796 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xa9b9156b, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
+2020-07-22 11:16:36.510 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xa9b9156b, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0x322b8d4c, L:/127.0.0.1:8080 - R:/127.0.0.1:65185]
+2020-07-22 11:16:36.511 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xa9b9156b, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
+2020-07-22 11:16:52.171 [Dunelr-netty-server-9] WARN  io.netty.channel.DefaultChannelPipeline - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.codec.http.websocketx.CorruptedWebSocketFrameException: received a frame that is not masked as expected
+	at io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder.protocolViolation(WebSocket08FrameDecoder.java:426) ~[netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder.protocolViolation(WebSocket08FrameDecoder.java:422) ~[netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder.decode(WebSocket08FrameDecoder.java:202) ~[netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:501) ~[netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:440) ~[netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:276) ~[netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:163) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
+2020-07-22 11:17:57.808 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xc590e6c3] REGISTERED
+2020-07-22 11:17:57.810 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xc590e6c3] BIND: 0.0.0.0/0.0.0.0:8080
+2020-07-22 11:17:57.817 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xc590e6c3, L:/0:0:0:0:0:0:0:0:8080] ACTIVE
+2020-07-22 11:18:02.686 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xc590e6c3, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0xb3f99b2e, L:/127.0.0.1:8080 - R:/127.0.0.1:65203]
+2020-07-22 11:18:02.688 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xc590e6c3, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
+2020-07-22 11:18:18.319 [Dunelr-netty-server-2] WARN  io.netty.channel.DefaultChannelPipeline - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.codec.http.websocketx.CorruptedWebSocketFrameException: received a frame that is not masked as expected
+	at io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder.protocolViolation(WebSocket08FrameDecoder.java:426) ~[netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder.protocolViolation(WebSocket08FrameDecoder.java:422) ~[netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder.decode(WebSocket08FrameDecoder.java:202) ~[netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:501) ~[netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:440) ~[netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:276) ~[netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:163) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
+2020-07-22 11:18:53.762 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xc590e6c3, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0xac2ea41c, L:/127.0.0.1:8080 - R:/127.0.0.1:65212]
+2020-07-22 11:18:53.762 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xc590e6c3, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
+2020-07-22 11:19:30.854 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xc590e6c3, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0xd58ac593, L:/127.0.0.1:8080 - R:/127.0.0.1:65223]
+2020-07-22 11:19:30.854 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xc590e6c3, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE
+2020-07-22 11:20:00.000 [Dunelr-netty-server-4] WARN  io.netty.channel.DefaultChannelPipeline - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.codec.http.websocketx.CorruptedWebSocketFrameException: received a frame that is not masked as expected
+	at io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder.protocolViolation(WebSocket08FrameDecoder.java:426) ~[netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder.protocolViolation(WebSocket08FrameDecoder.java:422) ~[netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder.decode(WebSocket08FrameDecoder.java:202) ~[netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:501) ~[netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:440) ~[netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:276) ~[netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:163) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-all-4.1.50.Final.jar:4.1.50.Final]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_251]
+2020-07-22 11:21:05.006 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xc590e6c3, L:/0:0:0:0:0:0:0:0:8080] READ: [id: 0xda6bb197, L:/127.0.0.1:8080 - R:/127.0.0.1:65236]
+2020-07-22 11:21:05.006 [Dunelr-netty-server-0] INFO  io.netty.handler.logging.LoggingHandler - [id: 0xc590e6c3, L:/0:0:0:0:0:0:0:0:8080] READ COMPLETE

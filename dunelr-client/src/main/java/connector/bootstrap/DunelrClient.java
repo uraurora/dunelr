@@ -102,6 +102,7 @@ public class DunelrClient {
             // Connect with V13 (RFC 6455 aka HyBi-17). You can change it to V08 or V00.
             // If you change it to V00, ping is not supported and remember to change
             // HttpResponseDecoder to WebSocketHttpResponseDecoder in the pipeline.
+
             final WebSocketClientHandshaker handShaker = WebSocketClientHandshakerFactory.newHandshaker(
                     uri, WebSocketVersion.V13,
                     null,
@@ -124,7 +125,7 @@ public class DunelrClient {
         DunelrClient client = null;
         try {
             client = DunelrClient.builder()
-                    .host(new URI("http://127.0.0.1:8080"))
+                    .host(new URI("ws://127.0.0.1:8080/websocket"))
                     .port(8080)
                     .build();
             client.start();
@@ -148,8 +149,7 @@ public class DunelrClient {
                     WebSocketFrame frame = new PingWebSocketFrame(Unpooled.wrappedBuffer(new byte[] { 8, 1, 8, 1 }));
                     ch.writeAndFlush(frame);
                 } else {
-                    // WebSocketFrame frame = new TextWebSocketFrame(msg);
-                    ByteBuf frame = Unpooled.copiedBuffer(msg, StandardCharsets.UTF_8);
+                    WebSocketFrame frame = new TextWebSocketFrame(msg);
                     ch.writeAndFlush(frame);
                 }
             }

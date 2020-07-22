@@ -1,4 +1,4 @@
-2020-07-22 11:20:00.000 [Dunelr-netty-server-4] WARN  io.netty.channel.DefaultChannelPipeline - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+2020-07-22 11:14:50.546 [Dunelr-netty-server-6] WARN  io.netty.channel.DefaultChannelPipeline - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
 io.netty.handler.codec.http.websocketx.CorruptedWebSocketFrameException: received a frame that is not masked as expected
 	at io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder.protocolViolation(WebSocket08FrameDecoder.java:426) ~[netty-all-4.1.50.Final.jar:4.1.50.Final]
 	at io.netty.handler.codec.http.websocketx.WebSocket08FrameDecoder.protocolViolation(WebSocket08FrameDecoder.java:422) ~[netty-all-4.1.50.Final.jar:4.1.50.Final]
