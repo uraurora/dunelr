@@ -46,6 +46,5 @@ public class DunelrClientInitializer extends ChannelInitializer<SocketChannel> {
         // 处理websocket相关业务的handler
         pipeline.addLast("websocket-handler", DunelrClientWebSocketHandler.newInstance());
 
-
     }
 }

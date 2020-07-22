@@ -1,6 +1,4 @@
-package file.value.context;
-
-import file.value.entry.DeltaEntry;
+package file.value.entry;
 
 import java.util.Iterator;
 import java.util.List;
@@ -14,10 +12,6 @@ import java.util.List;
 public class Delta implements IDelta {
 
     // private final int Id;
-
-    /**
-     * 增量文件的ByteBuf组合试图，因为某些重复部分不会以byte[]形式出现
-     */
 
     private final List<DeltaEntry> entries;
 

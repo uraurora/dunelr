@@ -2,7 +2,7 @@ package file.service;
 
 import file.entity.DuneFile;
 import file.entity.IDuneFile;
-import file.value.context.IDelta;
+import file.value.entry.IDelta;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

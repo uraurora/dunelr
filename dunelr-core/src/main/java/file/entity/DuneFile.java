@@ -2,9 +2,9 @@ package file.entity;
 
 import com.google.common.collect.Lists;
 import enums.CheckSumCategory;
-import file.value.context.Delta;
-import file.value.context.DuneFileSummary;
-import file.value.context.IDelta;
+import file.value.entry.Delta;
+import file.value.entry.DuneFileSummary;
+import file.value.entry.IDelta;
 import file.value.entry.DeltaEntry;
 import file.value.entry.DuneBlock;
 import util.encoder.ConvertUtil;

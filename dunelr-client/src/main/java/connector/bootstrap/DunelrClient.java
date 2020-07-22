@@ -2,23 +2,15 @@ package connector.bootstrap;
 
 
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
-import connector.handler.DunelrClientHttpResponseHandler;
 import connector.pipeline.DunelrClientInitializer;
 import io.netty.bootstrap.Bootstrap;
-import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.Channel;
-import io.netty.channel.ChannelInitializer;
-import io.netty.channel.ChannelPipeline;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
-import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.codec.http.DefaultHttpHeaders;
-import io.netty.handler.codec.http.HttpClientCodec;
-import io.netty.handler.codec.http.HttpObjectAggregator;
 import io.netty.handler.codec.http.websocketx.*;
-import io.netty.handler.codec.http.websocketx.extensions.compression.WebSocketClientCompressionHandler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -130,7 +122,6 @@ public class DunelrClient {
                     .build();
             client.start();
             Channel ch = client.channel;
-
             BufferedReader console = new BufferedReader(new InputStreamReader(System.in));
             while (true) {
                 String msg = console.readLine();

@@ -1,7 +1,7 @@
 package repository.entity;
 
 import com.google.common.collect.Lists;
-import file.value.context.IDelta;
+import file.value.entry.IDelta;
 
 import java.util.LinkedList;
 import java.util.List;

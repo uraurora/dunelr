@@ -2,7 +2,7 @@ package file.entity;
 
 import com.google.common.collect.Lists;
 import file.service.DuneFiles;
-import file.value.context.IDelta;
+import file.value.entry.IDelta;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

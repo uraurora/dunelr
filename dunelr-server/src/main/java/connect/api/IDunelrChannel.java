@@ -1,8 +1,8 @@
 package connect.api;
 
 
-import file.value.context.DunelrContext;
-import file.value.context.DunelrRequestContext;
+import protocol.value.context.DunelrContext;
+import protocol.value.context.DunelrRequestContext;
 
 import java.nio.file.Path;
 

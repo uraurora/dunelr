@@ -1,7 +1,7 @@
 package file.entity;
 
-import file.value.context.DuneFileSummary;
-import file.value.context.IDelta;
+import file.value.entry.DuneFileSummary;
+import file.value.entry.IDelta;
 
 import java.io.IOException;
 import java.nio.file.Files;

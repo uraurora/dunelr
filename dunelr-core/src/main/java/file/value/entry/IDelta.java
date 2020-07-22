@@ -1,6 +1,4 @@
-package file.value.context;
-
-import file.value.entry.DeltaEntry;
+package file.value.entry;
 
 import java.util.List;
 

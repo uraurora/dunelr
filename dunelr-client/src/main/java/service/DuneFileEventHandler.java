@@ -2,7 +2,7 @@ package service;
 
 import enums.DirectionEnum;
 import enums.DunelrFileEnum;
-import file.value.context.DunelrContext;
+import protocol.value.context.DunelrContext;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
