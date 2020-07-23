@@ -1,8 +1,8 @@
 package protocol.service.action;
 
-import protocol.service.request.IDunelrRequest;
-import protocol.service.response.CommonResponse;
-import protocol.service.response.IDunelrResponse;
+import protocol.value.request.IDunelrRequest;
+import protocol.value.response.CommonResponse;
+import protocol.value.response.IDunelrResponse;
 import protocol.value.context.IDunelrContext;
 
 import java.util.List;
@@ -32,7 +32,11 @@ public abstract class AbstractDunelrAction<REQUEST extends IDunelrRequest> {
     public IDunelrResponse execute(REQUEST request, IDunelrContext context) throws Exception {
         final List<BiFunction<REQUEST, IDunelrContext, Boolean>> rules = getValidateRule();
         if(rules.stream().anyMatch(rule-> !rule.apply(request, context))) {
-            return CommonResponse.createFailResponse(-1, null, COMMON_FAILED_MSG);
+            return CommonResponse.builder()
+                    .protocol(context.protocolType())
+                    .msg(COMMON_FAILED_MSG)
+                    .result(null)
+                    .build();
         }
 
         // Class<REQUEST> clazz = getGenericType();
