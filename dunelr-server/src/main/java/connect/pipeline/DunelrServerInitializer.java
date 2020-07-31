@@ -1,8 +1,6 @@
 package connect.pipeline;
 
-import connect.handler.DunelrServerHttpRequestHandler;
 import connect.handler.DunelrServerWebSocketHandler;
-import io.netty.buffer.ByteBuf;
 import io.netty.channel.*;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.handler.codec.http.HttpObjectAggregator;
@@ -27,7 +25,6 @@ public class DunelrServerInitializer extends ChannelInitializer<SocketChannel> {
 
     @Override
     protected void initChannel(SocketChannel ch) throws Exception {
-
         ChannelPipeline pipeline = ch.pipeline();
         // Http服务端的编解码器
         pipeline.addLast("http-server-codec", new HttpServerCodec());
@@ -39,8 +36,13 @@ public class DunelrServerInitializer extends ChannelInitializer<SocketChannel> {
         pipeline.addLast("compression", new WebSocketServerCompressionHandler());
         // 处理HttpRequest的业务
         //pipeline.addLast("http-server-handler", DunelrServerHttpRequestHandler.newInstance());
-        // 运行WebSocket服务器大部分工作的handler
-        pipeline.addLast("websocket-general-handler", new WebSocketServerProtocolHandler(WEBSOCKET_PATH, null, true));
+        // 运行WebSocket服务器大部分工作的handler，限定文件帧大小10M
+        pipeline.addLast("websocket-general-handler", new WebSocketServerProtocolHandler(
+                WEBSOCKET_PATH,
+                null,
+                true,
+                10 * 1024 * 1024
+        ));
         //  处理webSocket相关业务的handler
         pipeline.addLast("websocket-handler", DunelrServerWebSocketHandler.newInstance());
 
