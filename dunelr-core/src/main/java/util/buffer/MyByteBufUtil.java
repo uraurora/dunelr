@@ -10,7 +10,7 @@ import java.util.concurrent.Callable;
  * @date : 2020-06-24 10:15
  * @description :
  */
-public abstract class ByteBufUtil {
+public abstract class MyByteBufUtil {
 
     public static WrapperArray handleArray(ByteBuf buf){
         byte[] array;

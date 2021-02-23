@@ -2,11 +2,7 @@ package file.entity;
 
 import com.google.common.collect.Lists;
 import enums.CheckSumCategory;
-import file.value.entry.Delta;
-import file.value.entry.DuneFileSummary;
-import file.value.entry.IDelta;
-import file.value.entry.DeltaEntry;
-import file.value.entry.DuneBlock;
+import file.value.entry.*;
 import util.encoder.ConvertUtil;
 
 import java.io.*;
@@ -79,7 +75,7 @@ public class DuneFile implements IDuneFile{
 
     @Override
     public DuneFileSummary toSummary() throws IOException {
-        return DuneFileSummary.newInstance(blocks());
+        return new DuneFileSummary(blocks());
     }
 
     /**
@@ -93,7 +89,7 @@ public class DuneFile implements IDuneFile{
         int left = 0, start = 0;
         byte[] bytes = new byte[DuneBlock.SIZE];
         List<DeltaEntry> entries = Lists.newArrayList();
-        Map<Long, DuneBlock> map = weakCheckSumMap(other.toBlocks());
+        Map<Long, DuneBlock> map = weakCheckSumMap(other.getBlocks());
 
         try (RandomAccessFile raf = new RandomAccessFile(path.toFile(), "r")){
             while(left < size()){
@@ -145,7 +141,7 @@ public class DuneFile implements IDuneFile{
     public IDuneFile plus(IDelta deltaFile) throws IOException {
         // FIXME:完成文件整合，首先应当根据delta中的匹配个数来判断是是否文件整合，文件整合是否必须是新建方式
         // 当所有文件块都匹配
-        if (deltaFile.getEntries().stream().allMatch(DeltaEntry::isBool)) {
+        if (deltaFile.getEntries().stream().allMatch(DeltaEntry::isMatch)) {
             return this;
         } else {
             Path tempPath = path.getParent().resolve(DUNE_FILE_TEMP_PREFIX + path.getFileName());
@@ -157,7 +153,7 @@ public class DuneFile implements IDuneFile{
 
                     for (DeltaEntry e : deltaFile) {
                         // 文件块匹配，写入本地文件块
-                        if (e.isBool()) {
+                        if (e.isMatch()) {
                             int index = ConvertUtil.bytes2Int(e.getBuf());
                             raf.seek(DuneBlock.SIZE * index);
                             byte[] bytes = new byte[DuneBlock.SIZE];

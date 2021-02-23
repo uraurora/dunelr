@@ -90,7 +90,7 @@ public class Dunelr {
             for (IDuneFile tar : destination){
                 final IDelta delta = DuneFiles.delta(source, tar);
 
-                final int sum = delta.getEntries().stream().filter(e -> !e.isBool()).mapToInt(e -> e.getBuf().length).sum();
+                final int sum = delta.getEntries().stream().filter(e -> !e.isMatch()).mapToInt(e -> e.getBuf().length).sum();
                 System.out.println("byte length : " + sum);
 
                 res.add(DuneFiles.plus(tar, delta));

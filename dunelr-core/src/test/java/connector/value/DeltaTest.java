@@ -2,9 +2,9 @@ package connector.value;
 
 import file.entity.DuneFile;
 import file.entity.IDuneFile;
+import file.value.entry.DeltaEntry;
 import file.value.entry.DuneFileSummary;
 import file.value.entry.IDelta;
-import file.value.entry.DeltaEntry;
 import org.junit.Test;
 
 import java.io.BufferedWriter;
@@ -28,7 +28,7 @@ public class DeltaTest {
         System.out.println("source size : " + Files.size(source)/(1024*1024));
         IDuneFile file = DuneFile.newInstance(target);
         DuneFileSummary summary = file.toSummary();
-        System.out.println("block size : " + summary.toBlocks().size());
+        System.out.println("block size : " + summary.getBlocks().size());
         IDelta deltaFile = DuneFile.newInstance(source).delta(summary);
         for (DeltaEntry buf : deltaFile){
             System.out.println(buf);
